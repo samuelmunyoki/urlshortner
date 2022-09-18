@@ -1,4 +1,4 @@
 {
     "MongoBD_URL": "mongodb+srv://sharelink:sharelink@cluster0.elujauw.mongodb.net/?retryWrites=true&w=majority",
-    "BaseURL": "https://sharelinkshortner.herokuapp.com/"
+    "BaseURL": "https://sharelinkshortner.herokuapp.com"
 }
