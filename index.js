@@ -9,6 +9,9 @@ app.use(express.json());
 connectDB();
 app.use("/api/v1", apiRoute);
 app.use("/", redirectRoute);
+app.get("/alive", (req, res)=>{
+  res.send("<h2>🌱🌱Url Shortner Is ALive🌱🌱</h2> ")
+})
 app.listen(PORT, () => {
   console.log("++++++++ Server Started on port 3000 ++++++++");
 });
