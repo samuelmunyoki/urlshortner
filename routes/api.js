@@ -37,13 +37,13 @@ router.post("/", async (req, res) => {
       } else {
         res
           .status(200)
-          .send({ message: "❗ Invalid URL ❗", sharelink: { "https:// or http://" } });
+          .send({ message: "❗ Invalid URL ❗", sharelink: { shortUrl: "https:// or http://" } });
           
       }
     } catch (error) {
       res
         .status(200)
-        .send({ message: "🦀 Could not generate Shortened URL 🦀", sharelink: { "https:// or http://" } });
+        .send({ message: "🦀 Could not generate Shortened URL 🦀", sharelink: {  shortUrl: "https:// or http://" } } });
     }
   }
 });
