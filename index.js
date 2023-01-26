@@ -6,7 +6,7 @@ const apiRoute = require("./routes/api")
 const redirectRoute = require("./routes/redirect");
 const PORT = process.env.PORT || 80
 const app = express();
-app.options('*', cors())
+app.use(cors())
 app.use(express.json());
 connectDB();
 app.get("/alive", (req, res)=>{
