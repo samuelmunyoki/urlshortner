@@ -35,7 +35,7 @@ router.post("/", async (req, res) => {
           .status(200)
           .send({ message: "🐥 Short link: ", sharelink: { shortUrl } });
       } else {
-        res.status(200).send({ message: "❗ Invalid URL ❗" });
+        res.status(200).send({ message: "❗ Invalid URL ❗",sharelink: { "" } });
       }
     } catch (error) {
       res.status(200).send({ message: "🦀 Could not generate Shortened URL 🦀" });
