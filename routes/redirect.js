@@ -10,10 +10,10 @@ router.get("/:id", async (req, res) => {
   if (urlExist) {
     res.redirect(urlExist.redirectUrl);
   } else {
-    res.status(200).send({ message: "Invalid ShareLink" });
+    res.status(200).send({ message: "❗ Invalid ShareLink ❗" });
   }
 });
 router.get("/", async (req, res) => {
-  res.status(200).send("Api Is Working");
+  res.status(200).send("✅ Api Is Working ✅");
 })
 module.exports = router;
