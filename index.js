@@ -1,4 +1,5 @@
 const express = require("express");
+var cors = require('cors')
 const config = require("config");
 const connectDB = require("./database/dbconnect");
 const apiRoute = require("./routes/api")
