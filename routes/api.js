@@ -16,12 +16,12 @@ router.post("/", async (req, res) => {
     let BaseURL = config.get("BaseURL");
     var code = urlExist.shortCode;
     var shortUrl = `${BaseURL}/${code}`;
-    return res.status(200).send({ message: "🐥 Short link: ", sharelink: { shortUrl } });
+    return res
+      .status(200)
+      .send({ message: "🐥 Short link: ", sharelink: { shortUrl } });
   } else {
     try {
       let isUrlValid = validator.isUri(posturl);
-      console.log(posturl);
-      console.log(isUrlValid);
       if (isUrlValid != undefined) {
         var ShortUrlCode = shortID.generate();
         let newUrl = new Url({
@@ -35,10 +35,15 @@ router.post("/", async (req, res) => {
           .status(200)
           .send({ message: "🐥 Short link: ", sharelink: { shortUrl } });
       } else {
-        res.status(200).send({ message: "❗ Invalid URL ❗", sharelink: { "😺" } });
+        res
+          .status(200)
+          .send({ message: "❗ Invalid URL ❗", sharelink: { "" } });
+          
       }
     } catch (error) {
-      res.status(200).send({ message: "🦀 Could not generate Shortened URL 🦀" });
+      res
+        .status(200)
+        .send({ message: "🦀 Could not generate Shortened URL 🦀", sharelink: { "" } });
     }
   }
 });
