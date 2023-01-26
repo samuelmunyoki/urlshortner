@@ -43,7 +43,7 @@ router.post("/", async (req, res) => {
     } catch (error) {
       res
         .status(200)
-        .send({ message: "🦀 Could not generate Shortened URL 🦀", sharelink: {  shortUrl: "https:// or http://" } } });
+        .send({ message: "🦀 Could not generate Shortened URL 🦀",  sharelink: { shortUrl: "https:// or http://" }});
     }
   }
 });
